@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 
-@MapperScan("com.bluesgao.findingpet.user.dao*")
+@MapperScan("com.bluesgao.findingpet.dao.*")
 public class MybatisPlusConfig {
     /**
      * mybatis-plus分页插件<br>
