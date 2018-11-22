@@ -1,6 +1,6 @@
 package com.bluesgao.findingpet.common;
 
-public enum CodeEnum {
+public enum ResultCodeEnum {
     SUCCESS(200, "成功"),
     FAIL(400, "失败"),
     SYSTEM_ERROR(500, "系统错误"),
@@ -9,14 +9,14 @@ public enum CodeEnum {
     private int code;
     private String desc;
 
-    CodeEnum(int code, String desc) {
+    ResultCodeEnum(int code, String desc) {
         this.code = code;
         this.desc = desc;
     }
 
 
     public String getDescByCode(int code) {
-        for (CodeEnum item : CodeEnum.values()) {
+        for (ResultCodeEnum item : ResultCodeEnum.values()) {
             if (item.code == code) {
                 return item.desc;
             }

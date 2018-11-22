@@ -15,19 +15,19 @@ public class Result<T> implements Serializable {
 
     public static <T> Result successResult(T data) {
 
-        return genResult(CodeEnum.SUCCESS.getCode(), CodeEnum.SUCCESS.getDesc(), data);
+        return genResult(ResultCodeEnum.SUCCESS.getCode(), ResultCodeEnum.SUCCESS.getDesc(), data);
     }
 
     public static <T> Result failResult(T data) {
-        return genResult(CodeEnum.FAIL.getCode(), CodeEnum.FAIL.getDesc(), data);
+        return genResult(ResultCodeEnum.FAIL.getCode(), ResultCodeEnum.FAIL.getDesc(), data);
     }
 
     public static <T> Result paramsErrorResult(T data){
-        return genResult(CodeEnum.PARAMS_ERROR.getCode(), CodeEnum.PARAMS_ERROR.getDesc(), data);
+        return genResult(ResultCodeEnum.PARAMS_ERROR.getCode(), ResultCodeEnum.PARAMS_ERROR.getDesc(), data);
     }
 
     public static <T> Result systemErrorResult(T data){
-        return genResult(CodeEnum.SYSTEM_ERROR.getCode(), CodeEnum.SYSTEM_ERROR.getDesc(), data);
+        return genResult(ResultCodeEnum.SYSTEM_ERROR.getCode(), ResultCodeEnum.SYSTEM_ERROR.getDesc(), data);
     }
 
     private static <T> Result genResult(int code, String msg, T data) {
